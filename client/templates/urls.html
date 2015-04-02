@@ -1,0 +1,59 @@
+<template name="urls">
+
+    <!--<form class="addNewsForm">
+        <input type="text" id="title" class="form-control" name="title" placeholder="Enter title"/> <br/>
+        <input type="text" id="url" class="form-control" name="url" placeholder="Enter URL"/> <br/>
+        <input type="submit" value="Add" class="btn btn-success btn-lg"/>
+    </form>
+    <div class="form">
+      <form class="">
+       
+        <input type="submit" value="Add" class="btn btn-success btn-lg"/>
+      </form>
+    </div> --> 
+    <div class="form">
+        <form class="addVideosForm">
+            <input type="text" id="title" class="form-control" name="title" placeholder="Enter title"/> <br/>
+            <input type="text" id="url" class="form-control" name="url" placeholder="Enter URL"/> 
+            <br/>
+            <input type="text" id="description" class="form-control" name="description" placeholder="Enter description"/><br/>
+            <input type="text" id="videourl" class="form-control" name="videourl" placeholder="Enter videourl"/><br/>
+            <input type="submit" value="Add" class="btn btn-success btn-lg"/>
+        </form>
+    </div>
+
+    <div class="form">
+        <form class="addVideosForm2">
+            <input type="text" id="videourl" name="videourl" placeholder="paste url and hit enter..." style="width: 100%;" />
+            <input type="submit" value="Add" class="btn btn-success btn-lg"/>
+        </form>
+    </div>
+
+    {{#each items}}
+        <hr>
+        <!--<p>
+            <strong><a href="/news/{{urlTitle}}}" target="_blank">{{url}}</a></strong>
+        </p>-->
+      <p>{{>oembed}}</p>  
+
+      {{#each news}}
+          {{> newsItem}}
+      {{/each}}    
+    {{/each}}
+
+    
+</template>
+
+<template name="allNewsView">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <ul class="list-group">
+                    {{#each news}}
+                        {{> newsItem}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>

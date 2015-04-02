@@ -1,0 +1,45 @@
+
+
+
+    <template name="newsItem">
+        <li class="list-group-item">
+            <a href="{{url}}" target="_blank">{{title}}</a>
+            <p>{{description}}</p>
+            <p>{{videourl}}</p>
+            <a href="/news/{{urlTitle}}" class="badge no-style">comments</a>
+        </li>
+    </template>
+
+    <template name="newsView">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                    <h1>{{title}}</h1>
+                    <hr/>
+                    <p>{{description}}</p><hr/>
+                    <p>{{videourl}}</p><hr/>
+                    <h2>Comments</h2>
+                    <span>There will be some comments soon!</span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template name="addNews">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4">
+
+                        <div class="form">
+                            <form class="addNewsForm">
+                                <input type="text" id="title" class="form-control" name="title" placeholder="Enter title"/> <br/>
+                                <input type="text" id="url" class="form-control" name="url" placeholder="Enter URL"/> 
+                                <br/>
+                                <input type="text" id="description" class="form-control" name="description" placeholder="Enter description"/><br/>
+                                <input type="submit" value="Add" class="btn btn-success btn-lg"/>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </template>
